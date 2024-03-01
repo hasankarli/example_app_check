@@ -17,7 +17,10 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions are not supported for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -25,7 +28,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macOS - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -43,38 +49,17 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyACQfHtN6KiDEVGl5zEh1cbyFd2Ruqr6RY',
-    appId: '1:151155522161:web:1c66a623d0d434194b39d0',
-    messagingSenderId: '151155522161',
-    projectId: 'example-app-check-bdd04',
-    authDomain: 'example-app-check-bdd04.firebaseapp.com',
-    storageBucket: 'example-app-check-bdd04.appspot.com',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB0krocK9-AuwrNSkTii7uNfTgyBy7DfOQ',
-    appId: '1:151155522161:android:e99f0ec773cab5bc4b39d0',
-    messagingSenderId: '151155522161',
-    projectId: 'example-app-check-bdd04',
-    storageBucket: 'example-app-check-bdd04.appspot.com',
+    apiKey: 'xxx', // Change this
+    appId: 'xx',
+    messagingSenderId: 'xxx',
+    projectId: 'xxx',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDqaIQXA_Ts51GPAvwqyrP9SHR0MdDvnu8',
-    appId: '1:151155522161:ios:d3682ef7270b4d1d4b39d0',
-    messagingSenderId: '151155522161',
-    projectId: 'example-app-check-bdd04',
-    storageBucket: 'example-app-check-bdd04.appspot.com',
-    iosBundleId: 'com.hasankarli.exampleAppCheck',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDqaIQXA_Ts51GPAvwqyrP9SHR0MdDvnu8',
-    appId: '1:151155522161:ios:13b8e578c706835c4b39d0',
-    messagingSenderId: '151155522161',
-    projectId: 'example-app-check-bdd04',
-    storageBucket: 'example-app-check-bdd04.appspot.com',
-    iosBundleId: 'com.example.exampleAppCheck.RunnerTests',
+    apiKey: 'xxx', // Change this
+    appId: 'xx',
+    messagingSenderId: 'xxx',
+    projectId: 'xxx',
   );
 }
