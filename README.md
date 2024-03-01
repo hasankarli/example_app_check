@@ -6,6 +6,6 @@ This repository provides a step-by-step guide on how to implement and use the Fi
 You can read the full article on Medium: [Firebase App Check in Flutter](https://medium.com/@hasankarli/flutter-firebase-app-check-21355c9ad349)
 
 ## Getting Started
-Step: Creating a Firebase Project
-Step: Enabling Firebase App Check
-Step: Integrating Firebase into the Flutter Project
+* Step: Creating a Firebase Project
+* Step: Enabling Firebase App Check
+* Step: Integrating Firebase into the Flutter Project
